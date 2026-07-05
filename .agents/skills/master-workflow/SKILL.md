@@ -1,7 +1,6 @@
 ---
 name: master-workflow
-description: >
-  業務全体を管理する標準ワークフロー。
+description: 業務全体を管理する標準ワークフロー。
   現在の状態を確認し、必要なSkillを選択する。
 ---
 
@@ -20,23 +19,44 @@ description: >
 
 1. PLAN.md は存在するか
 2. SPEC.md は存在するか
-3. TODO.md は存在するか
-4. KNOWLEDGE.md は存在するか
-5. 未完了タスクはあるか
-6. PLANや要件に変更はあるか
+3. SPECは承認済みか
+4. TODO.md は存在するか
+5. TODOは承認済みか
+6. KNOWLEDGE.md は存在するか
+7. 未完了タスクはあるか
+8. PLANや要件に変更はあるか
 
 ## Workflow
 
-PLAN が無い → project-init
-SPEC が無い → project-init
-TODO が無い → project-init
-PLAN変更・要件変更あり → spec-review
-未完了タスクあり → 今日着手するタスクを選定する → task-execution
-作業終了 → knowledge-update
+PLAN が無い
+→ project-init
+
+SPEC が無い
+→ project-init
+
+SPEC が未承認
+→ 人間レビュー
+
+TODO が無い
+→ project-init
+
+TODO が未承認
+→ 人間レビュー
+
+PLAN変更・要件変更あり
+→ spec-review
+
+未完了タスクあり
+→ 今日着手するタスクを選定する
+→ task-execution
+
+作業終了
+→ knowledge-update
 
 ## Rules
 
 - PLANなしでSPECを作成しない
-- SPEC未確定でTODOを確定しない
+- SPEC未承認でTODOを作成しない
+- TODO未承認で実行しない
 - TODOなしで実行しない
 - 必要なSkillだけを実行する

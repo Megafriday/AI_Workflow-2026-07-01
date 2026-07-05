@@ -1,7 +1,6 @@
 ---
 name: project-init
-description: >
-  PLANを起点として
+description: PLANを起点として
   SPEC・TODO・KNOWLEDGEを初期化する。
 ---
 
@@ -23,23 +22,32 @@ PLAN.md をもとに
 
 4. 不足情報を質問する
 
-5. SPECが完成するまで繰り返す
+5. SPECを更新する
 
-6. TODO.md を作成する
+6. 人間へレビューを依頼する
 
-7. タスクを実行可能な粒度まで分割する
+7. 承認されるまでSPECを更新する
 
-8. 各タスクへ担当者を付与する
+8. TODO.md を作成する
+
+9. タスクを実行可能な粒度まで分割する
+
+10. 各タスクへ担当者を付与する
 
 - [AI]
 - [HUMAN]
 
-9. KNOWLEDGE.md を初期化する
+11. 人間へレビューを依頼する
+
+12. 承認されるまでTODOを更新する
+
+13. KNOWLEDGE.md を初期化する
 
 ## Rules
 
 - PLANが無い状態でSPECを作成しない
-- SPECが固まるまでTODOを確定しない
+- SPECが承認されるまでTODOを作成しない
+- TODOが承認されるまで実行しない
 
 ## Completion
 

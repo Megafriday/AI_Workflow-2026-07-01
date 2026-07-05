@@ -1,11 +1,15 @@
 ---
 name: task-execution
-description: >
-  TODOに基づき1タスクずつ実行し、
+description: TODOに基づき1タスクずつ実行し、
   TODOを最新状態へ維持する。
 ---
 
 # Task Execution
+
+## Start Conditions
+
+- SPECは承認済み
+- TODOは承認済み
 
 ## Rules
 
@@ -13,6 +17,7 @@ description: >
 - TODOには担当者を付与する
 - 一度に実行するタスクは1件のみ
 - HUMANタスクでは停止する
+- 未承認のTODOは実行しない
 
 ## Procedure
 
@@ -35,7 +40,8 @@ description: >
 - TODOを更新する
 - 次のタスクを決定する
 
-エラー・新しい知見・運用変更が発生した場合 → knowledge-update を実行する
+エラー・新しい知見・運用変更が発生した場合
+→ knowledge-update を実行する
 
 ## Finish
 

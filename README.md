@@ -9,7 +9,11 @@ PLAN
 ↓
 SPEC
 ↓
+Human Review
+↓
 TODO
+↓
+Human Review
 ↓
 TASK
 ↓
@@ -30,3 +34,5 @@ KNOWLEDGE
 作業の開始・再開時は `master-workflow` を実行します。
 
 `master-workflow` が現在の状態を確認し、必要に応じて各 Skill を実行します。
+
+SPEC.md と TODO.md は、人間のレビュー・承認後に次工程へ進みます。
